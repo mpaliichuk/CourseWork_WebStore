@@ -26,6 +26,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav">
+                        <div class="mt-4">
+                            <a class="btn btn-primary mr-2" asp-area="" asp-controller="Account" asp-action="Login">Log In</a>
+                            <a class="btn btn-secondary" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                            <a class="btn btn-danger" asp-action="Logout" asp-controller="Account">Log out</a>
+                        </div>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -47,4 +54,3 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-

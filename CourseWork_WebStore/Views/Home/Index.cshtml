@@ -1,9 +1,21 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@{
+    var userName = ViewBag.UserName;
+}
+@using Microsoft.AspNetCore.Authentication.Cookies
+
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    <h2>Welcome, @userName</h2>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <text>
+            <a asp-action="Logout" asp-controller="Account">Log out</a>
+        </text>
+    }
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
