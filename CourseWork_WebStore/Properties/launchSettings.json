@@ -7,6 +7,9 @@
       "sslPort": 44363
     }
   },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=127.0.0.1;Database=WebStoreDB;User Id=sa;Password=MyPass@word;TrustServerCertificate=True;"
+  },
   "profiles": {
     "http": {
       "commandName": "Project",
