@@ -1,11 +1,14 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using CourseWork_WebStore.Models;
 using CourseWork_WebStore.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CourseWork_WebStore.Controllers
 {
@@ -35,6 +38,7 @@ namespace CourseWork_WebStore.Controllers
                     ModelState.AddModelError(string.Empty, "Username or email already exists.");
                     return View(model);
                 }
+
                 var user = new User
                 {
                     Username = model.Username,
@@ -44,34 +48,38 @@ namespace CourseWork_WebStore.Controllers
                     LastName = model.LastName,
                     Role = model.Role
                 };
+
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction("Login", "Account");
             }
+
             return View(model);
         }
-
 
         public IActionResult Login()
         {
             var model = new LoginViewModel();
             return View(model);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = _context.Users.FirstOrDefault(u => u.PasswordHash == model.Password);
+                var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.PasswordHash == model.Password);
 
                 if (user != null)
                 {
                     var claims = new List<Claim>
-                {
-                new Claim(ClaimTypes.Name, user.Username)
-                };
+            {
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Role),
+                new Claim("UserId", user.UserId.ToString())
+            };
 
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     var authProperties = new AuthenticationProperties
@@ -83,30 +91,61 @@ namespace CourseWork_WebStore.Controllers
                         new ClaimsPrincipal(claimsIdentity),
                         authProperties);
 
-                    TempData["UserName"] = user.Username;
+                    HttpContext.Session.SetString("UserName", user.Username);
+                    HttpContext.Session.SetString("Email", user.Email);
+                    HttpContext.Session.SetString("Role", user.Role);
+                    HttpContext.Session.SetInt32("UserId", user.UserId);
+
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid username or password.");
+                    ModelState.AddModelError(string.Empty, "Invalid email or password.");
                 }
             }
             return View(model);
         }
+
+
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
+        }
+
+        private async Task Authenticate(string email)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, email),
+            };
+
+            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            var principal = new ClaimsPrincipal(identity);
+
+            var authenticationProperties = new AuthenticationProperties
+            {
+                IsPersistent = true
+            };
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, authenticationProperties);
+        }
+
         private bool UsernameExists(string username)
         {
             return _context.Users.Any(u => u.Username == username);
         }
+
         private bool EmailExists(string email)
         {
             return _context.Users.Any(u => u.Email == email);
         }
-        public IActionResult Logout()
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AccessDenied(string returnUrl = null)
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-
-            return RedirectToAction("Index", "Home");
+            return View();
         }
-
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E6/JgFGx6BV5n22C1A4TC7Or3MtmsbhuhKm86jV8wfs=",
+  "Hash": "EDWRzbrH0jIMhF8w3lBhbazPN899NDuWNMI90eC/Kc0=",
   "Source": "CourseWork_WebStore",
   "BasePath": "_content/CourseWork_WebStore",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/css/styles.css",
+      "SourceId": "CourseWork_WebStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/",
+      "BasePath": "_content/CourseWork_WebStore",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/styles.css"
     },
     {
       "Identity": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/favicon.ico",

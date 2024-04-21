@@ -24,11 +24,13 @@
     <None Remove="Views\Categories\" />
     <None Remove="ViewModels\" />
     <None Remove="Views\Account\" />
+    <None Remove="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Products\" />
     <Folder Include="Views\Categories\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Account\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
 </Project>

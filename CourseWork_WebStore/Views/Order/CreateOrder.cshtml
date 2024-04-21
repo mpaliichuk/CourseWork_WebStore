@@ -1,0 +1,15 @@
+﻿@model CourseWork_WebStore.ViewModels.CreateOrderViewModel
+
+<h1>Create Order</h1>
+
+<form asp-action="CreateOrder" method="post">
+    <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input type="number" id="userId" name="userId" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="totalAmount">Total Amount:</label>
+        <input type="number" id="totalAmount" name="totalAmount" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Order</button>
+</form>

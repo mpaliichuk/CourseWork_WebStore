@@ -1,19 +1,20 @@
 ﻿using CourseWork_WebStore.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add logging configuration
 builder.Logging.AddConsole();
-
 builder.Services.AddDbContext<StoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<StoreDbContext>();
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+{
+    
+})
+.AddEntityFrameworkStores<StoreDbContext>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -22,12 +23,22 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/Account/Logout";
     });
 
-// Add services to the container.
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/Account/AccessDenied";
+});
+
+builder.Services.AddSession();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -39,10 +50,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseHttpLogging();
-
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseHttpLogging();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

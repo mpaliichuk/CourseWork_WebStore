@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/css/styles.css",
+      "PackagePath": "staticwebassets/css/styles.css"
+    },
+    {
       "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
