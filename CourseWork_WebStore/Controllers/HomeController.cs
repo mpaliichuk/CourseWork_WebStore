@@ -18,7 +18,7 @@ public class HomeController : Controller
         _context = context;
     }
 
-    public async Task<IActionResult> Index(string categoryName)
+    public async Task<IActionResult> Index(string categoryName, string productName)
     {
         if (User.Identity.IsAuthenticated)
         {
@@ -28,21 +28,29 @@ public class HomeController : Controller
         {
             ViewBag.UserName = "Guest";
         }
-        var categories = await _context.Categories.ToListAsync();
 
+        var categories = await _context.Categories.ToListAsync();
         ViewBag.Categories = categories;
 
         IQueryable<Product> productsQuery = _context.Products;
 
+        // Filter by category name
         if (!string.IsNullOrEmpty(categoryName))
         {
             productsQuery = productsQuery.Where(p => p.Category.Name == categoryName);
+        }
+
+        // Filter by product name
+        if (!string.IsNullOrEmpty(productName))
+        {
+            productsQuery = productsQuery.Where(p => p.Name.Contains(productName));
         }
 
         var products = await productsQuery.ToListAsync();
 
         return View(products);
     }
+
 
 
 

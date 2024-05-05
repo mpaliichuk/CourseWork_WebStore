@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using CourseWork_WebStore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,10 +12,12 @@ namespace CourseWork_WebStore.Controllers
 {
     public class ProductsController : Controller
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly StoreDbContext _context;
 
-        public ProductsController(StoreDbContext context)
+        public ProductsController(IHttpContextAccessor httpContextAccessor,StoreDbContext context)
         {
+            _httpContextAccessor = httpContextAccessor;
             _context = context;
         }
 
@@ -118,5 +122,63 @@ namespace CourseWork_WebStore.Controllers
         {
             return _context.Products.Any(e => e.ProductId == id);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> SubmitReview(ReviewViewModel model)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (!userId.HasValue)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            var userRole = HttpContext.Session.GetString("Role");
+
+            if (string.IsNullOrEmpty(userRole) || (userRole != "Admin" && userRole != "User"))
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
+            var review = new Review
+            {
+                UserId = userId.Value,
+                ProductId = model.ProductId,
+                Rating = model.Rating,
+                Comment = model.Comment
+            };
+
+            _context.Reviews.Add(review);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("WriteReview", new { productId = model.ProductId });
+        }
+
+        public IActionResult WriteReview(int productId)
+        {
+            var session = _httpContextAccessor.HttpContext.Session;
+            var userId = session.GetInt32("UserId");
+
+            var product = _context.Products.FirstOrDefault(p => p.ProductId == productId);
+            var reviews = _context.Reviews.Where(r => r.ProductId == productId).ToList();
+
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
+
+            var allUsers = _context.Users.ToList();
+
+            ViewData["Product"] = product;
+            ViewData["UserId"] = userId;
+            ViewData["Reviews"] = reviews;
+            ViewData["User"] = user;
+            ViewData["AllUsers"] = allUsers;
+
+            return View();
+        }
+
+
+
+
     }
 }

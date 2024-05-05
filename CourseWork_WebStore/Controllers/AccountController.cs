@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using CourseWork_WebStore.Models;
 using CourseWork_WebStore.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,9 +18,11 @@ namespace CourseWork_WebStore.Controllers
     public class AccountController : Controller
     {
         private readonly StoreDbContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public AccountController(StoreDbContext context)
+        public AccountController(StoreDbContext context, IHttpContextAccessor httpContextAccessor)
         {
+            _httpContextAccessor = httpContextAccessor;
             _context = context;
         }
 
@@ -38,12 +43,13 @@ namespace CourseWork_WebStore.Controllers
                     ModelState.AddModelError(string.Empty, "Username or email already exists.");
                     return View(model);
                 }
+                string hashedPassword = HashPassword(model.Password);
 
                 var user = new User
                 {
                     Username = model.Username,
                     Email = model.Email,
-                    PasswordHash = model.Password,
+                    PasswordHash = hashedPassword,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Role = model.Role
@@ -57,6 +63,15 @@ namespace CourseWork_WebStore.Controllers
 
             return View(model);
         }
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                var hash = BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+                return hash;
+            }
+        }
 
         public IActionResult Login()
         {
@@ -69,7 +84,8 @@ namespace CourseWork_WebStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.PasswordHash == model.Password);
+                string hashedPassword = HashPassword(model.Password);
+                var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.PasswordHash == hashedPassword);
 
                 if (user != null)
                 {
@@ -109,6 +125,7 @@ namespace CourseWork_WebStore.Controllers
 
         public IActionResult Logout()
         {
+            _httpContextAccessor.HttpContext.Session.Clear();
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
         }

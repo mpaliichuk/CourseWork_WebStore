@@ -1,26 +1,56 @@
 ﻿<Properties StartupConfiguration="{55F7A667-77CD-46F0-B3FD-A5CC190725C8}|https">
-  <MonoDevelop.Ide.ItemProperties.CourseWork__WebStore PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CourseWork_WebStore/Views/Home/Index.cshtml">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CourseWork_WebStore/Models/Review.cs">
     <Files>
-      <File FileName="CourseWork_WebStore/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="CourseWork_WebStore/Views/Home/Index.cshtml" Line="10" Column="1" />
+      <File FileName="CourseWork_WebStore/Models/ApplicationUser.cs" />
+      <File FileName="CourseWork_WebStore/Models/Category.cs" />
+      <File FileName="CourseWork_WebStore/Models/CreateOrderViewModel.cs" />
+      <File FileName="CourseWork_WebStore/Models/ErrorViewModel.cs" />
+      <File FileName="CourseWork_WebStore/Models/Order.cs" />
+      <File FileName="CourseWork_WebStore/Models/OrderItem.cs" />
+      <File FileName="CourseWork_WebStore/Models/Product.cs" />
+      <File FileName="CourseWork_WebStore/Models/Review.cs" Line="10" Column="1" />
+      <File FileName="CourseWork_WebStore/Models/StoreDbContext.cs" />
+      <File FileName="CourseWork_WebStore/Models/User.cs" />
+      <File FileName="CourseWork_WebStore/ViewModels/LoginViewModel.cs" />
+      <File FileName="CourseWork_WebStore/ViewModels/RegisterViewModel.cs" />
+      <File FileName="CourseWork_WebStore/Views/Account/AccessDenied.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Account/Login.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Account/Register.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Home/Index.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Order/CreateOrder.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Order/Index.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Products/Index.cshtml" />
+      <File FileName="CourseWork_WebStore/Program.cs" />
+      <File FileName="CourseWork_WebStore/Controllers/HomeController.cs" />
+      <File FileName="CourseWork_WebStore/Controllers/OrderController.cs" />
+      <File FileName="CourseWork_WebStore/Controllers/AccountController.cs" />
+      <File FileName="CourseWork_WebStore/Views/Shared/_Layout.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Products/Create.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/Order/ShowOrderItems.cshtml" />
+      <File FileName="CourseWork_WebStore/Controllers/ProductsController.cs" />
+      <File FileName="CourseWork_WebStore/Views/Products/Edit.cshtml" />
+      <File FileName="CourseWork_WebStore/Views/_ViewImports.cshtml" />
+      <File FileName="CourseWork_WebStore/wwwroot/css/site.css" />
+      <File FileName="CourseWork_WebStore/wwwroot/css/styles.css" />
+      <File FileName="CourseWork_WebStore/appsettings.json" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CourseWork_WebStore" expanded="True">
             <Node name="CourseWork_WebStore" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Review.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
+                <Node name="Order" expanded="True" />
+                <Node name="Products" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -31,6 +61,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.CourseWork__WebStore PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

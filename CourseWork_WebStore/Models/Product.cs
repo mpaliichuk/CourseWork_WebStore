@@ -1,6 +1,7 @@
 ﻿using System;
-using Microsoft.AspNetCore.Mvc.ViewEngines;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace CourseWork_WebStore.Models
 {
@@ -13,21 +14,24 @@ namespace CourseWork_WebStore.Models
         [StringLength(100)]
         public string Name { get; set; }
 
-        public string Description { get; set; } 
+        public string Description { get; set; }
 
         [Required]
-        public decimal Price { get; set; } 
+        public decimal Price { get; set; }
 
         [Required]
-        public int Stock { get; set; } 
+        public int Stock { get; set; }
 
         public int CategoryId { get; set; }
 
+        public string? PictureUrl { get; set; }
+
+        // New property for uploaded file
+        //[Display(Name = "Upload Picture")]
+        //public IFormFile PictureFile { get; set; }
 
         public Category Category { get; set; }
         public ICollection<Review> Reviews { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }
     }
-
 }
-

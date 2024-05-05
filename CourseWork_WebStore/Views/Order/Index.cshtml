@@ -34,6 +34,9 @@
                         <form asp-action="DeleteOrder" asp-route-id="@order.OrderId">
                             <button type="submit" class="btn btn-warning">Delete Order</button>
                         </form>
+                        <form asp-action="ShowOrderItems" asp-route-orderId="@order.OrderId">
+                            <button type="submit" class="btn btn-secondary">Show Order Items</button>
+                        </form>
                     }
                     else
                     {

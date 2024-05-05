@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CourseWork_WebStore.Models.OrderItem>
+
+<h1>Order Items</h1>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order Item ID</th>
+                <th>Order ID</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var orderItem in Model)
+            {
+                <tr>
+                    <td>@orderItem.OrderItemId</td>
+                    <td>@orderItem.OrderId</td>
+                    <td>@orderItem.ProductId</td>
+                    <td>@orderItem.Product.Name</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(orderItem.Product.PictureUrl))
+                        {
+                            <img src="@orderItem.Product.PictureUrl" alt="@orderItem.Product.Name" style="max-width: 50px; max-height: 50px;" />
+                        }
+                    </td>
+                    <td>@orderItem.Quantity</td>
+                    <td>@orderItem.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No order items found.</p>
+}
+
+<button type="button" class="btn btn-secondary" onclick="location.href='@Url.Action("Index", "Home")'">Back to Home</button>

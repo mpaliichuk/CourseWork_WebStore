@@ -66,4 +66,11 @@ app.MapControllerRoute(
     pattern: "Categories/{action=Index}/{id?}",
     defaults: new { controller = "Categories" });
 
+app.MapControllerRoute(
+    name: "WriteReview",
+    pattern: "Products/WriteReview/{productId}",
+    defaults: new { controller = "Product", action = "WriteReview" }
+);
+
+
 app.Run();
