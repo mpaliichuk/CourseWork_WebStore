@@ -83,3 +83,4 @@
 /Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
 /Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
 /Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/obj/Debug/net7.0/CourseWork_WebStore.MvcApplicationPartsAssemblyInfo.cs
+/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

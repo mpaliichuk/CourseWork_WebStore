@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ytFDhH9YblnjY+LpZfIBZbgLJ6FjcAz2dDql/AdyKP/UzHPyT3l+GEFKzILtO6tUv4I+IEFd02Xwj0ym1ljQ0A==",
+  "dgSpecHash": "gMyxZaCAhipiendZy+OiBKW7xGJtbSAOAqGw7kQCZ5kAwmd7JueyzaqVnuq7qbbbiWzZYr0WaejxylGiVm3dhg==",
   "success": true,
   "projectFilePath": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/CourseWork_WebStore.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/Users/mpaliichuk/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/Users/mpaliichuk/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/mpaliichuk/.nuget/packages/microsoft.aspnetcore.authentication.google/7.0.15/microsoft.aspnetcore.authentication.google.7.0.15.nupkg.sha512",
+    "/Users/mpaliichuk/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.18/microsoft.aspnetcore.authentication.jwtbearer.7.0.18.nupkg.sha512",
     "/Users/mpaliichuk/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.15/microsoft.aspnetcore.cryptography.internal.7.0.15.nupkg.sha512",
     "/Users/mpaliichuk/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.15/microsoft.aspnetcore.cryptography.keyderivation.7.0.15.nupkg.sha512",
     "/Users/mpaliichuk/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/7.0.15/microsoft.aspnetcore.identity.entityframeworkcore.7.0.15.nupkg.sha512",
