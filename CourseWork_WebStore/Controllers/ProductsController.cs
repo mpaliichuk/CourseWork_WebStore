@@ -22,6 +22,7 @@ namespace CourseWork_WebStore.Controllers
         }
 
         // GET: Products
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             var products = await _context.Products.ToListAsync();

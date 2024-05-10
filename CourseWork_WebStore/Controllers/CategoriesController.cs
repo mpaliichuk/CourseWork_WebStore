@@ -1,6 +1,8 @@
 ﻿using CourseWork_WebStore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,6 +18,7 @@ namespace CourseWork_WebStore.Controllers
         }
 
         // GET: Categories
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             var categories = await _context.Categories.ToListAsync();
@@ -47,6 +50,7 @@ namespace CourseWork_WebStore.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Name")] Category category)
         {
             _context.Add(category);
@@ -73,6 +77,7 @@ namespace CourseWork_WebStore.Controllers
         // POST: Categories/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("CategoryId,Name")] Category category)
         {
             if (id != category.CategoryId)
@@ -100,6 +105,7 @@ namespace CourseWork_WebStore.Controllers
         }
 
         // GET: Categories/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -120,6 +126,7 @@ namespace CourseWork_WebStore.Controllers
         // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var category = await _context.Categories.FindAsync(id);

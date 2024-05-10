@@ -38,7 +38,7 @@
                 @if (!string.IsNullOrEmpty(userName))
                 {
                     <h1>Welcome, @userName</h1>
-                    <h2>Email: @email</h2>
+                    @*<h2>Email: @email</h2>
                     <h2>Role: @role</h2>
                     @if (userId.HasValue)
                     {
@@ -46,7 +46,7 @@
                     }
                     <text>
                         <a asp-action="Logout" asp-controller="Account" class="btn btn-danger">Log out</a>
-                    </text>
+                    </text>*@
                 }
                 else
                 {
