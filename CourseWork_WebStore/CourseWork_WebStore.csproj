@@ -19,6 +19,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.18" />
+    <PackageReference Include="Azure.Identity" Version="1.11.3" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Products\" />

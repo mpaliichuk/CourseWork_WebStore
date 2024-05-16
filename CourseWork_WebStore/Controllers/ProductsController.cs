@@ -30,6 +30,7 @@ namespace CourseWork_WebStore.Controllers
         }
 
         // GET: Products/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.Categories = _context.Categories.ToList();
@@ -39,6 +40,7 @@ namespace CourseWork_WebStore.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create(Product product)
         {
             _context.Products.Add(product);
@@ -48,6 +50,7 @@ namespace CourseWork_WebStore.Controllers
         }
         // GET: Products/Edit/5
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -66,6 +69,7 @@ namespace CourseWork_WebStore.Controllers
 
         // POST: Products/Edit/5
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int id, Product product)
         {
             if (id != product.ProductId)
@@ -93,6 +97,7 @@ namespace CourseWork_WebStore.Controllers
         }
 
         // GET: Products/Delete/5
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int? id)
         {
             if (id == null)
