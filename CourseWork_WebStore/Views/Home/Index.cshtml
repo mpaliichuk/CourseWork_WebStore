@@ -84,10 +84,11 @@
                                                         <div class="form-group">
                                                             <label for="quantity" style="color:green">Quantity:</label>
                                                             <input type="number" id="quantity" name="quantity" value="1" min="1" style="width: 20%;" />
+                                                            <a href="@Url.Action("WriteReview", "Products", new { productId = product.ProductId })" class="btn btn-medium btn-black" type="submit">Write a review<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
                                                             <button href="#" class="btn btn-medium btn-black" type="submit">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></button>
                                                         </div>
                                                     </form>
-
+                                                    
                                                 </div>
                                             </div>
                                             <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
