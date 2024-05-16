@@ -221,10 +221,6 @@
       "PackagePath": "staticwebassets/images/visa.jpg"
     },
     {
-      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/index.html",
-      "PackagePath": "staticwebassets/index.html"
-    },
-    {
       "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/ajax-loader.gif",
       "PackagePath": "staticwebassets/js/ajax-loader.gif"
     },

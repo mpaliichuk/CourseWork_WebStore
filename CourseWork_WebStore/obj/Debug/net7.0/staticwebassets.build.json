@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CNT2EtywStRvIfYtJLsSmg9yQLdnkvuxGHyr0qM8McM=",
+  "Hash": "IcYlVgrMbQ3pxd4APu8jT6MHrC/p1AYxLx7lAiuJpgc=",
   "Source": "CourseWork_WebStore",
   "BasePath": "_content/CourseWork_WebStore",
   "Mode": "Default",
@@ -1987,23 +1987,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/visa.jpg"
-    },
-    {
-      "Identity": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/index.html",
-      "SourceId": "CourseWork_WebStore",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/",
-      "BasePath": "_content/CourseWork_WebStore",
-      "RelativePath": "index.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/index.html"
     },
     {
       "Identity": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/ajax-loader.gif",
