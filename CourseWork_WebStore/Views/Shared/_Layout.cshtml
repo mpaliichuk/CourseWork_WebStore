@@ -5,37 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CourseWork_WebStore</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CourseWork_WebStore.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+    
+            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CourseWork_WebStore</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <div class="mt-4">
+                                <a class="btn btn-primary mr-2" asp-area="" asp-controller="Account" asp-action="Login">Log In</a>
+                                <a class="btn btn-secondary" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                                <a class="btn btn-danger" asp-action="Logout" asp-controller="Account">Log out</a>
+                                <a class="btn btn-success" asp-action="Index" asp-controller="Order">View Orders</a>
+                                <a class="btn btn-info" asp-action="Index" asp-controller="Products">Products View/Edit</a>
+                                <a class="btn btn-warning" asp-action="Index" asp-controller="Categories">Categories View/Edit</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>*@
+        
+    <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
+        <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CourseWork_WebStore</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="https://themewagon.github.io/MiniStore/images/main-logo.png" class="logo">
+                </a>
+                <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="navbar-icon">
+                        <use xlink:href="#navbar-icon"></use>
+                    </svg>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <div class="mt-4">
-                            <a class="btn btn-primary mr-2" asp-area="" asp-controller="Account" asp-action="Login">Log In</a>
-                            <a class="btn btn-secondary" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-                            <a class="btn btn-danger" asp-action="Logout" asp-controller="Account">Log out</a>
-                            <a class="btn btn-success" asp-action="Index" asp-controller="Order">View Orders</a>
-                            <a class="btn btn-info" asp-action="Index" asp-controller="Products">Products View/Edit</a>
-                            <a class="btn btn-warning" asp-action="Index" asp-controller="Categories">Categories View/Edit</a>
-                        </div>
-                    </ul>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+                    <div class="offcanvas-header px-4 pb-0">
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="https://themewagon.github.io/MiniStore/images/main-logo.png" class="logo">
+                        </a>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Log In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-action="Logout" asp-controller="Account">Log out</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Order">View Orders</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Edit</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Products">Products View/Edit</a>
+                                    </li>
+                                    <li class="nav-item" style="margin-left:5%">
+                                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Categories">Categories View/Edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--<li class="nav-item dropdown" style="margin-left:-2%">
+                                <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Categories</a>
+                                <ul class="dropdown-menu">
+                                    <ul class="list-group" style="margin-bottom: 20px;">
+                                        <li class="list-group-item"><a href="#" class="category-link btn btn-primary btn-block" data-category="">All</a></li>-->
+                                        @*@foreach (var category in ViewBag.Categories)
+                                        {
+                                            <li class="list-group-item"><a href="#" class="category-link btn btn-primary btn-block" data-category="@category.Name">@category.Name</a></li>
+                                        }*@
+                                    <!--</ul>
+                                </ul>
+                            </li>-->
+
+
+                            <!--<div class="container" style="margin-top:200px">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="filters">
+                    <div class="left-panel">
+                        <h3>Categories</h3>
+
+                    </div>
+                    <div class="right-panel">
+                        <form id="filterForm" asp-action="Index" asp-controller="Home" method="get">
+                            <input type="hidden" id="categoryFilter" name="categoryName" />
+                            <input type="text" id="productName" name="productName" placeholder="Search by name" class="form-control mb-2" />-->
+                            <!-- New input field for searching by product name -->
+                            <!--<button type="submit" id="applyFilterButton" class="btn btn-primary btn-block">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+                            @*<li class="nav-item">
+            <a class="nav-link me-4" href="#mobile-products">Products</a>
+        </li>*@
+                            <li class="nav-item dropdown">
+                                @*<a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>*@
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="about.html" class="dropdown-item">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="dropdown-item">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="dropdown-item">Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="cart.html" class="dropdown-item">Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout.html" class="dropdown-item">Checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="single-post.html" class="dropdown-item">Single Post</a>
+                                    </li>
+                                    <li>
+                                        <a href="single-product.html" class="dropdown-item">Single Product</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html" class="dropdown-item">Contact</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <div class="user-items ps-5">
+                                    <ul class="d-flex justify-content-end list-unstyled">
+                                        <li class="search-item pe-3">
+                                            <a href="#" class="search-button">
+                                                <svg class="search">
+                                                    <use xlink:href="#search"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="pe-3">
+                                            <a href="#">
+                                                <svg class="user">
+                                                    <use xlink:href="#user"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="cart.html">
+                                                <svg class="cart">
+                                                    <use xlink:href="#cart"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>

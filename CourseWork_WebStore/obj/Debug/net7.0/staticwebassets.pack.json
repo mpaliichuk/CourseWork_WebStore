@@ -5,20 +5,248 @@
       "PackagePath": "staticwebassets/CourseWork_WebStore.bundle.scp.css"
     },
     {
-      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/css/site.css",
-      "PackagePath": "staticwebassets/css/site.css"
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
     },
     {
-      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/css/styles.css",
-      "PackagePath": "staticwebassets/css/styles.css"
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/css/ajax-loader.gif",
+      "PackagePath": "staticwebassets/css/ajax-loader.gif"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/css/vendor.css",
+      "PackagePath": "staticwebassets/css/vendor.css"
     },
     {
       "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/site.js",
-      "PackagePath": "staticwebassets/js/site.js"
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/banner-image.png",
+      "PackagePath": "staticwebassets/images/banner-image.png"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/cart-item1.jpg",
+      "PackagePath": "staticwebassets/images/cart-item1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/cart-item2.jpg",
+      "PackagePath": "staticwebassets/images/cart-item2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/commentor-item1.jpg",
+      "PackagePath": "staticwebassets/images/commentor-item1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/commentor-item2.jpg",
+      "PackagePath": "staticwebassets/images/commentor-item2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/commentor-item3.jpg",
+      "PackagePath": "staticwebassets/images/commentor-item3.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/dhl.png",
+      "PackagePath": "staticwebassets/images/dhl.png"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/insta-item1.jpg",
+      "PackagePath": "staticwebassets/images/insta-item1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/insta-item2.jpg",
+      "PackagePath": "staticwebassets/images/insta-item2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/insta-item3.jpg",
+      "PackagePath": "staticwebassets/images/insta-item3.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/insta-item4.jpg",
+      "PackagePath": "staticwebassets/images/insta-item4.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/insta-item5.jpg",
+      "PackagePath": "staticwebassets/images/insta-item5.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/main-logo.png",
+      "PackagePath": "staticwebassets/images/main-logo.png"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/mastercard.jpg",
+      "PackagePath": "staticwebassets/images/mastercard.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/paypal.jpg",
+      "PackagePath": "staticwebassets/images/paypal.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-image.jpg",
+      "PackagePath": "staticwebassets/images/post-image.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-image1.jpg",
+      "PackagePath": "staticwebassets/images/post-image1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item1.jpg",
+      "PackagePath": "staticwebassets/images/post-item1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item2.jpg",
+      "PackagePath": "staticwebassets/images/post-item2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item3.jpg",
+      "PackagePath": "staticwebassets/images/post-item3.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item4.jpg",
+      "PackagePath": "staticwebassets/images/post-item4.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item5.jpg",
+      "PackagePath": "staticwebassets/images/post-item5.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item6.jpg",
+      "PackagePath": "staticwebassets/images/post-item6.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item7.jpg",
+      "PackagePath": "staticwebassets/images/post-item7.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item8.jpg",
+      "PackagePath": "staticwebassets/images/post-item8.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-item9.jpg",
+      "PackagePath": "staticwebassets/images/post-item9.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-small-image1.jpg",
+      "PackagePath": "staticwebassets/images/post-small-image1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-small-image2.jpg",
+      "PackagePath": "staticwebassets/images/post-small-image2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/post-small-image3.jpg",
+      "PackagePath": "staticwebassets/images/post-small-image3.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item1.jpg",
+      "PackagePath": "staticwebassets/images/product-item1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item10.jpg",
+      "PackagePath": "staticwebassets/images/product-item10.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item2.jpg",
+      "PackagePath": "staticwebassets/images/product-item2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item3.jpg",
+      "PackagePath": "staticwebassets/images/product-item3.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item4.jpg",
+      "PackagePath": "staticwebassets/images/product-item4.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item5.jpg",
+      "PackagePath": "staticwebassets/images/product-item5.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item6.jpg",
+      "PackagePath": "staticwebassets/images/product-item6.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item7.jpg",
+      "PackagePath": "staticwebassets/images/product-item7.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item8.jpg",
+      "PackagePath": "staticwebassets/images/product-item8.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/product-item9.jpg",
+      "PackagePath": "staticwebassets/images/product-item9.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/review-item1.jpg",
+      "PackagePath": "staticwebassets/images/review-item1.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/review-item2.jpg",
+      "PackagePath": "staticwebassets/images/review-item2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/search-icon.png",
+      "PackagePath": "staticwebassets/images/search-icon.png"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/shippingcard.png",
+      "PackagePath": "staticwebassets/images/shippingcard.png"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/singel-product-item.jpg",
+      "PackagePath": "staticwebassets/images/singel-product-item.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/single-image1.png",
+      "PackagePath": "staticwebassets/images/single-image1.png"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/single-image2.jpg",
+      "PackagePath": "staticwebassets/images/single-image2.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/single-image3.jpg",
+      "PackagePath": "staticwebassets/images/single-image3.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/single-post.jpg",
+      "PackagePath": "staticwebassets/images/single-post.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/images/visa.jpg",
+      "PackagePath": "staticwebassets/images/visa.jpg"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/ajax-loader.gif",
+      "PackagePath": "staticwebassets/js/ajax-loader.gif"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets/js/jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/modernizr.js",
+      "PackagePath": "staticwebassets/js/modernizr.js"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/plugins.js",
+      "PackagePath": "staticwebassets/js/plugins.js"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/js/script.js",
+      "PackagePath": "staticwebassets/js/script.js"
     },
     {
       "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/lib/bootstrap/LICENSE",
@@ -247,6 +475,10 @@
     {
       "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/mpaliichuk/Projects/CourseWork_WebStore/CourseWork_WebStore/wwwroot/style.css",
+      "PackagePath": "staticwebassets/style.css"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.CourseWork_WebStore.Microsoft.AspNetCore.StaticWebAssets.props",
