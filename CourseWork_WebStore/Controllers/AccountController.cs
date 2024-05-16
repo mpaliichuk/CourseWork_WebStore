@@ -29,6 +29,7 @@ namespace CourseWork_WebStore.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Admin,User")]
         public async Task<IActionResult> Token()
         {
             var email = HttpContext.Session.GetString("Email");

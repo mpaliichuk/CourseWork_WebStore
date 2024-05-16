@@ -19,9 +19,17 @@ namespace CourseWork_WebStore.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=127.0.0.1;Database=WebStoreDB;User Id=sa;TrustServerCertificate=True;Password=MyPass@word;");
-
+            optionsBuilder.UseSqlServer("Server=tcp:webstoredbserver.database.windows.net,1433;" +
+                                        "Initial Catalog=WebStoreDB;" +
+                                        "Persist Security Info=False;" +
+                                        "User ID='Pali_rl19@student.itstep.org';" +
+                                        "Password=44r0m0Yo;" +
+                                        "MultipleActiveResultSets=False;" +
+                                        "Encrypt=True;" +
+                                        "TrustServerCertificate=False;" +
+                                        "Authentication=\"Active Directory Password\";");
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>()

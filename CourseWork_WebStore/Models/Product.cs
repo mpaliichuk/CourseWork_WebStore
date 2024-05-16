@@ -12,9 +12,9 @@ namespace CourseWork_WebStore.Models
 
         [Required]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string ?Name { get; set; }
 
-        public string Description { get; set; }
+        public string ?Description { get; set; }
 
         [Required]
         public decimal Price { get; set; }
@@ -30,8 +30,8 @@ namespace CourseWork_WebStore.Models
         //[Display(Name = "Upload Picture")]
         //public IFormFile PictureFile { get; set; }
 
-        public Category Category { get; set; }
-        public ICollection<Review> Reviews { get; set; }
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public Category ?Category { get; set; }
+        public ICollection<Review> ?Reviews { get; set; }
+        public ICollection<OrderItem> ?OrderItems { get; set; }
     }
 }
